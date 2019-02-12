@@ -1,6 +1,6 @@
-include_directories(${checkers_cpp_SOURCE_DIR}/include)
+include_directories(${mcts_checkers_SOURCE_DIR}/include)
 
-add_executable(checkers_cpp main.cc board.cc mcts.cc minimax.cc state.cc
-  tree.cc)
+add_executable(mcts_checkers main.cc board.cc mcts.cc minimax.cc
+  state.cc tree.cc)
 
-target_link_libraries(checkers_cpp)
+target_link_libraries(mcts_checkers)
