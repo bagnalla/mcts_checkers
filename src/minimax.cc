@@ -12,6 +12,7 @@ using namespace util;
 
 namespace checkers
 {
+  // Iterative deepening.
   pair<Action, double> ABS_deepening(const State &state, int time_limit_ms)
   {
     auto start_time = chrono::steady_clock::now();
@@ -28,6 +29,11 @@ namespace checkers
     return move_score;
   }
 
+  // Forward declares
+  pair<Action, double> ABS_max(const State&, double, double, int);
+  double ABS_min(const State&, double, double, int);
+
+  // Depth-limited search.
   pair<Action, double> ABS(const State &state, int d)
   {
     return ABS_max(state, numeric_limits<double>::lowest(),
@@ -49,7 +55,7 @@ namespace checkers
       int best_i = -1;
       for (size_t i = 0; i < actions.size(); ++i) {
 	auto action = actions[i];
-        State s(state);
+	State s(state);
 	s.apply_action(action);
 	double x = ABS_min(s, alpha, beta, d-1);
 	if (x > v) {
@@ -79,7 +85,7 @@ namespace checkers
       double v = numeric_limits<double>::max();
       for (size_t i = 0; i < actions.size(); ++i) {
 	auto action = actions[i];
-        State s(state);
+	State s(state);
 	s.apply_action(action);
 	auto p = ABS_max(s, alpha, beta, d-1);
 	if (p.second < v) {

@@ -16,6 +16,9 @@ namespace checkers
 {
   enum Player : unsigned char { P1, P2 };
 
+  // A state contains the board state and whose turn it is, and
+  // provides methods for modifying the state or evaluating the
+  // current position.
   struct State
   {
   public:

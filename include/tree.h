@@ -7,6 +7,7 @@
 
 namespace checkers
 {
+  // Game search tree nodes.
   struct Node
   {
     Node(Node *parent, const State &state, const Action &action);

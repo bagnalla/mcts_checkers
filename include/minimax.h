@@ -8,17 +8,13 @@
 
 namespace checkers
 {
+  // Iterative deepening alpha-beta minimax search.
   std::pair<Action, double>
     ABS_deepening(const State &state, int time_limit_ms);
 
+  // Depth-limited alpha-beta minimax search.
   std::pair<Action, double>
     ABS(const State &state, int d);
-
-  std::pair<Action, double>
-    ABS_max(const State &state, double alpha, double beta, int d);
-
-  double
-    ABS_min(const State &state, double alpha, double beta, int d);
 }
 
 #endif

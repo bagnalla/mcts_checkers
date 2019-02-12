@@ -335,26 +335,10 @@ namespace checkers
     return os;
   }
 
-  // void Board::print() const
-  // {
-  //   for (int i = 0; i < BOARD_SIZE; ++i) {
-  //     for (int j = 0; j < BOARD_SIZE; ++j) {
-  // 	cout << square_char(this->board[i][j]) << " ";
-  //     }
-  //     cout << endl;
-  //   }
-  // }
-
   void Board::print() const
   {
     cout << *this << endl;
   }
-
-  // void Move::print() const
-  // {
-  //   cout << '(' << this->i1 << ", " << this->j1 << ") (" << this->i2 <<
-  //     ", " << this->j2 << ") " << this->kind << ' ' << this->player;
-  // }
 
   ostream& operator<<(ostream& os, const Move& m)
   {

@@ -5,17 +5,7 @@ using namespace std;
 
 namespace checkers
 {
-  // Node::Node(Node *parent, const State &state, const Action &action)
-  // {
-  //   this->init(parent, state, action);
-  //   this->unvisited_actions =
-  //     state.board.legal_actions(state.get_cur_player());
-  // }
-
-  namespace
-  {
-    static int node_id_counter = 0;
-  }
+  static int node_id_counter = 0;
 
   Node::Node(Node *parent, const State &state, const Action &action)
   {

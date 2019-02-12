@@ -8,10 +8,13 @@
 
 namespace checkers
 {
-  enum Player : unsigned char ;
-  enum Square : unsigned char { empty, P1_piece, P1_king, P2_piece, P2_king };
-  enum MoveKind : unsigned char { move, take };
+  typedef unsigned char byte;
+  enum Player : byte;
+  enum Square : byte { empty, P1_piece, P1_king, P2_piece, P2_king };
+  enum MoveKind : byte { move, take };
 
+
+  // A single move of a piece.
   struct Move
   {
     Move(int i1, int j1, int i2, int j2, MoveKind kind, Player player)
@@ -25,6 +28,10 @@ namespace checkers
   std::ostream& operator<<(std::ostream &os, const Move &m);
   std::ostream& operator<<(std::ostream &os, const std::vector<Move> &ms);
 
+
+  // A player actions is sequence of piece moves. In most cases it's a
+  // singleton, but sometimes there are multiple jumps in a single
+  // action.
   struct Action
   {
     Action() {};
@@ -35,6 +42,9 @@ namespace checkers
 
   std::ostream& operator<<(std::ostream &os, const Action &a);
 
+
+  // A board contains the board state and provides methods for
+  // computing legal moves and evaluating the current position.
   class Board
   {
   public:
