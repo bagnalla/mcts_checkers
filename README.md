@@ -19,3 +19,5 @@ cd Release
 cmake -D CMAKE_BUILD_TYPE=Release ..
 make
 ```
+
+The executable will be `src/mcts_checkers` relative to the build directory.
