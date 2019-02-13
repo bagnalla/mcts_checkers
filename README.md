@@ -5,13 +5,17 @@ alpha-beta minimax agent for playing against.
 CMake is required.
 
 To build Debug:
-* mkdir Debug
-* cd Debug
-* cmake -D CMAKE_BUILD_TYPE=Debug ..
-* make
+```
+mkdir Debug
+cd Debug
+cmake -D CMAKE_BUILD_TYPE=Debug ..
+make
+```
 
 To build Release:
-* mkdir Release
-* cd Release
-* cmake -D CMAKE_BUILD_TYPE=Release ..
-* make
+```
+mkdir Release
+cd Release
+cmake -D CMAKE_BUILD_TYPE=Release ..
+make
+```
