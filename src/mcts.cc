@@ -53,6 +53,14 @@ namespace checkers
       }
     }
 
+    // Forward declare everything used by UCTSearch.
+    Node* TreePolicy(Node *root);
+    Node* Expand(Node *root);
+    Node* BestChild(const Node *node);
+    double DefaultPolicy(const State &state);
+    void Backup(Node *node, double reward);
+
+    // The primary search function to be used from outside.
     Action UCTSearch(const State &state, int time_limit_ms)
     {
       // Load the root node from the store if possible.

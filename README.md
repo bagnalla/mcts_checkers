@@ -2,6 +2,8 @@
 MCTS+UCB (UCT) agent for checkers in C++. Also includes a basic
 alpha-beta minimax agent for playing against.
 
+Based on the algorithm outlined in [Browne et al. 2012](http://mcts.ai/pubs/mcts-survey-master.pdf).
+
 CMake is required.
 
 To build Debug:
