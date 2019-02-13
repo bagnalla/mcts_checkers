@@ -19,7 +19,6 @@ namespace checkers
     double total_reward;
     double avg_reward;
     unsigned int visit_count;
-    bool expanded; // Has the node been expanded for the first time?
     std::vector<Action> unvisited_actions;
     std::vector<Node*> children;
   private:

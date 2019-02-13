@@ -23,7 +23,6 @@ namespace checkers
     this->total_reward = 0.0;
     this->avg_reward = numeric_limits<double>::max();
     this->visit_count = 0;
-    this->expanded = false;
   }
 
   Node::~Node()
